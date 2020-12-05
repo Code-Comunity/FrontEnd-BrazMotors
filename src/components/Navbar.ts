@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const NavBar = styled.div`
-  background-color: #44475a;
+  background-color: #282a36;
   width: 100%;
   height: max-content;
   position: fixed;
