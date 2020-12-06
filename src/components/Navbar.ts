@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
 export const NavBar = styled.div`
-  background-color: #44475a;
+  background-color: #282525;
   width: 100%;
   height: max-content;
   position: fixed;
   display: flex;
   justify-content: space-between;
   padding: 10px 90px;
+  z-index: 10;
 
   #Logo {
     width: 150px;

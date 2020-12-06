@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
+import Image from 'next/image'
 import {
   Container,
   Header,
@@ -9,11 +10,18 @@ import {
 } from "../components/Layout";
 import { NavBar, OptionsNavbar } from "../components/Navbar";
 import { Card, CardImage, CardInfo } from "../components/CardComponents";
+import { ContainerWhats } from "../components/WhatsApp";
 const Logo =
   "https://static.wixstatic.com/media/f55eb9_75da84b90d074eb492e51266a5110559~mv2.png/v1/fill/w_284,h_87,al_c,q_85,usm_0.66_1.00_0.01/logo_02.webp";
 
+import Banner from "../assets/1.png";
+
+//icons
+import { RiWhatsappFill } from "react-icons/ri";
+
 //APIS
 import { CardsHome } from "./api/fakeApi";
+
 //import axios from "axios";
 
 export default function Home() {
@@ -38,12 +46,16 @@ export default function Home() {
       </NavBar>
       <Container>
         <Header>
-          <img
-            style={{ objectFit: "cover" }}
-            src="https://static.wixstatic.com/media/ff6b3b_4eb252be33414a11a847a55a67505e4b~mv2.png/v1/fill/w_1219,h_295,al_c,q_85/ff6b3b_4eb252be33414a11a847a55a67505e4b~mv2.webp"
+          <Image
+            src={Banner}
+            alt="Picture of the author"
+            width={500}
+            height={500}
           />
         </Header>
-
+        <ContainerWhats>
+          <span><RiWhatsappFill /></span>
+        </ContainerWhats>
         <FirstSection>
           <h1>Escolha o que combina com você</h1>
           <h2>CARROS INCRÍVEIS COM PREÇOS IMPERDÍVEIS</h2>

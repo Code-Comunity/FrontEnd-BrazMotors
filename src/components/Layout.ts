@@ -42,7 +42,7 @@ export const SecondSection = styled.div`
   height: max-content;
   padding: 70px 100px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 15px;
   align-content: center;
   justify-items: center;
