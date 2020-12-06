@@ -25,10 +25,10 @@ export const FirstSection = styled.div`
   h1 {
     font-size: 2.8rem;
     font-weight: 700;
-    color: #000;
+    color: #44475a;
   }
   h2 {
-    color: #44475a;
+    color: #282a36;
     border-bottom: solid #ff5555 4px;
     margin-top: 25px;
     font-size: 1.5rem;
@@ -51,4 +51,52 @@ export const SecondSection = styled.div`
     display: flex;
     flex-direction: column;
   }
+`;
+
+export const CentralizeText = styled.div`
+  width: 100%;
+  height: max-content;
+  padding: 70px 100px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1{
+    font-size: 2.3rem;
+    margin-bottom: 35px;
+    color: #44475a;
+  }
+  p{
+    font-size: 1.1rem;
+    color: #44475a;
+  }
+`;
+
+
+export const Footer = styled.div`
+  width: 100%;
+  height: max-content;
+  padding: 70px 100px;
+  background-color: #282a36;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: white;
+
+  a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+`;
+
+export const ItemsFooter = styled.div`
+  display: flex;
+  align-items: center;
+
+  ul{
+    list-style: none;
+  }
+
 `;

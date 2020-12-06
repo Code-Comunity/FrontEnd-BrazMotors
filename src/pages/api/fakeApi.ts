@@ -20,8 +20,20 @@ const CardsHome = [
   },
   {
     id: 4,
-    img: "https://1.bp.blogspot.com/-2VVvLZh23s8/Vk9kYYtehqI/AAAAAAAAsZ0/nGLZ_oKX7J0/s1600/VW-Gol-2015-BlackFriday%2B%25282%2529.jpg",
+    img: "https://1.bp.blogspot.com/-2VVvLZh23s8/Vk9kYYtehqI/AAAAAAAAsZ0/nGLZ_oKX7J0/s1600/VW-Gol-2015-#44475aFriday%2B%25282%2529.jpg",
     titulo: "Gol",
+    preço: 60.000
+  },
+  {
+    id: 5,
+    img: "",
+    titulo: "Celta",
+    preço: 60.000
+  },
+  {
+    id: 6,
+    img: "",
+    titulo: "Fusion",
     preço: 60.000
   }
 ]
