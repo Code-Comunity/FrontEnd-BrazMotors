@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import Image from 'next/image'
+import Image from 'next/image';
 import {
   Container,
   Header,
@@ -10,43 +10,50 @@ import {
   CentralizeText,
   Footer,
   ItemsFooter,
-} from "../components/Layout";
-import { NavBar, OptionsNavbar } from "../components/Navbar";
-import { Card, CardImage, CardInfo } from "../components/CardComponents";
-import { ContainerWhats } from "../components/WhatsApp";
+} from "../components/styleds/Layout.Styled";
+import { NavBar, OptionsNavbar } from "../components/styleds/Navbar.Styled";
+import { Card, CardImage, CardInfo } from "../components/styleds/CardComponents.Styled";
+import { ContainerWhats } from "../components/styleds/WhatsApp.Styled";
 const Logo =
   "https://static.wixstatic.com/media/f55eb9_75da84b90d074eb492e51266a5110559~mv2.png/v1/fill/w_284,h_87,al_c,q_85,usm_0.66_1.00_0.01/logo_02.webp";
 
+import MenuComponent from "../components/MenuComponent";
 
 import Banner from "../assets/1.png";
 //Icons
-import { IoMailSharp, IoLocationSharp, IoCall, RiWhatsappFill } from "react-icons/io5";
+import { IoMailSharp, IoLocationSharp, IoCall } from "react-icons/io5";
+
+//Whats
+import WhatsApp from "../components/WhatsApp";
 
 //APIS
 import { CardsHome } from "./api/fakeApi";
 
 //import axios from "axios";
 
-export default function Home() {
+// const url = window.location.pathname;
+// const splitURL = url.split("/");
+
+export const getStaticProps = async () => {
+
+  const response = await fetch('https://teste-brazmotors.herokuapp.com/carros/')
+  const data = await response.json();
+
+  return {
+    props: {
+      carro: data,
+    }
+  }
+}
+
+export default function Home({carros}) {
+  console.log(carros)
   return (
     <>
       <Head>
         <title>HomePage</title>
       </Head>
-      <NavBar>
-        <img id="Logo" src={Logo} alt="logo" />
-        <OptionsNavbar>
-          <li>
-            <Link href="#">Home</Link>
-          </li>
-          <li>
-            <Link href="#">Mecanica Preventiva</Link>
-          </li>
-          <li>
-            <Link href="#">Catalogo</Link>
-          </li>
-        </OptionsNavbar>
-      </NavBar>
+      <MenuComponent />
       <Container>
         <Header>
           <Image
@@ -56,9 +63,9 @@ export default function Home() {
             height={500}
           />
         </Header>
-        <ContainerWhats>
-          <span><RiWhatsappFill /></span>
-        </ContainerWhats>
+
+        <WhatsApp />
+
         <FirstSection>
           <h1>Escolha o que combina com você</h1>
           <h2 style={{ borderBottom: "solid 3px #ff5555", paddingBottom: 15 }}>
@@ -72,7 +79,7 @@ export default function Home() {
                 <CardImage uri={e.img} />
                 <CardInfo>
                   <h4>{e.titulo}</h4>
-                  <h5>{e.preço}</h5>
+                  <h5>{e.preço.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</h5>
                 </CardInfo>
               </Card>
             )
@@ -124,6 +131,6 @@ export default function Home() {
           </ItemsFooter>
         </Footer>
       </Container>
-    </>
+      </>
   );
 }

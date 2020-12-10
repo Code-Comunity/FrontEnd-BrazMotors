@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   height: 100%;
+  /* @media (max-width: 700px){
+    display: flex;
+    flex-direction: column;
+  } */
 `;
 
 export const Header = styled.div`
@@ -52,6 +56,7 @@ export const SecondSection = styled.div`
     flex-direction: column;
   }
 `;
+
 
 export const CentralizeText = styled.div`
   width: 100%;

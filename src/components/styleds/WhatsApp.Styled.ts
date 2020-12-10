@@ -1,14 +1,15 @@
 import styled from "styled-components";
 
 export const ContainerWhats = styled.div`
-    width: 68px;
-    height: 68px;
+    width: 45px;
+    height: 45px;
     border-radius: 100%;
     background-color: #fff;
     position: fixed;
     margin-top: 5px;
     margin-right: 5px;
     right: 10px;
+    bottom: 5vh;
     z-index:11;
     cursor: pointer;
 
