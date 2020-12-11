@@ -10,10 +10,12 @@ import { ButtonBlackBorder } from '../components/styleds/Buttons.Styled';
 
 import Teste from '../assets/testePreven.png';
 
-import Modal from '../components/modalCarrinho';
+import Modal from '../components/Modal.Component';
 
 //Whats
 import WhatsApp from "../components/WhatsApp";
+
+import FooterComponent from '../components/FooterComponent';
 
 
 export default function Index() {
@@ -86,9 +88,10 @@ export default function Index() {
                     <Input type="text" placeholder="Nome" />
                     <Input type="text" placeholder="Telefone" />
                     <Input type="text" placeholder="Email" />
-                    <ButtonBlackBorder>Enviar</ButtonBlackBorder>
+                    <ButtonBlackBorder width="50%">Enviar</ButtonBlackBorder>
                </InputsBox>
            </ContainerForms>
+           <FooterComponent />
         </Container>
         {isModalVisible ? <Modal onClose={() => setIsModalVisible(false)} /> : null}
     </>

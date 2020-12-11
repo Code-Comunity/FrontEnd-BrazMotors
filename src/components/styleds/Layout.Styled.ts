@@ -3,10 +3,12 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   height: 100%;
-  /* @media (max-width: 700px){
+  @media (max-width: 700px){
+    width: 100VW;
     display: flex;
     flex-direction: column;
-  } */
+    align: center;
+  } 
 `;
 
 export const Header = styled.div`
@@ -94,6 +96,7 @@ export const Footer = styled.div`
     text-decoration: none;
     font-weight: bold;
   }
+
 `;
 
 export const ItemsFooter = styled.div`

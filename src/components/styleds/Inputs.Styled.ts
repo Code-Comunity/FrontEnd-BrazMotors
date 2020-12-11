@@ -38,7 +38,7 @@ export const InputsBox = styled.div`
 `;
 
 export const Input = styled.input`
-  width: 80%;
+  width: 50%;
   height: 50px;
   background: white;
   padding-left: 15px;
@@ -47,6 +47,10 @@ export const Input = styled.input`
   border: 1px solid #000000;
   box-sizing: border-box;
   margin: 15px;
+
+  @media (max-width: 700px){
+    width: 80%;
+  }
 `;
 
 export const SmallInput = styled.input`

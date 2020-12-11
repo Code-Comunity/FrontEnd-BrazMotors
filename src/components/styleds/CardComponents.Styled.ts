@@ -39,3 +39,4 @@ export const CardInfo = styled.div`
     font-size: 1.2rem;
   }
 `;
+

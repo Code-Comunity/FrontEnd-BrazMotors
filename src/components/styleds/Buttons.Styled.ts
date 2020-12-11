@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ButtonBlack = styled.button`
-  width: ${prop => prop.width || "100%"};
+  width: ${prop => prop.width || "90%"};
   height: ${prop => prop.height || "50px"};
   background: #000000;
   border: 1px solid #000000;

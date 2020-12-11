@@ -18,7 +18,7 @@ export default function MenuComponent() {
             <Link href="/showroom">Showroom</Link>
           </li>
           <li>
-            <Link href="#">Mecanica Preventiva</Link>
+            <Link href="/Preventiva">Mecanica Preventiva</Link>
           </li>
           <li>
             <Link href="#">Catalogo</Link>

@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 
+
 //imports de components
 import MenuComponent from "../components/MenuComponent";
 import { Container, CardsContainer, Card } from "../components/styleds/Showroom.Styled";
@@ -22,7 +23,7 @@ import { IoCall, IoLocationSharp, IoMailSharp } from 'react-icons/io5';
 import WhatsApp from "../components/WhatsApp";
 
 export const getStaticProps = async () => {
-  const response = await fetch('https://5500-ddb55904-db16-4ba4-a388-76505493c5dc.ws-us03.gitpod.io/marcas')
+  const response = await fetch('http://teste-brazmotors.herokuapp.com/marcas')
   const data = await response.json();
 
   return {
@@ -54,14 +55,15 @@ export default function Index({marca}) {
         <Container>
           <WhatsApp />
             <CardsContainer>
-            {CardsHome.map((e) => (
+            {marca.map((e) => (
                 <Card key={e.id}>
-                    <Image
+                    {/* <Image
                         src={LogoMarca}
                         alt="Picture of the author"
                         width={500}
                         height={500}
-                    />
+                    /> */}
+                    <h1>{e.marca}</h1>
                 </Card>
             ))}
             </CardsContainer>

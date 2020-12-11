@@ -30,28 +30,10 @@ export const CardsContainer = styled.div`
   padding: 10px;
 `
 
-export const Card = styled.div`
-  width: 480px;
-  height: 400px;
-  background: black;
-  cursor: pointer;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-
-  h1{
-    margin-top: 20px;
-    font-size: 25px;
-  }
-`
-
 export const CardTop = styled.div`
   width: 100%;
   height: 315px;
 `
-
-
 
 export const ContainerForms = styled.div`
   width: 100%;
@@ -65,4 +47,43 @@ export const ContainerForms = styled.div`
   align-items: center;
   justify-content: center;
 
+`
+export const CardHover = styled.div`
+  width: 480px;
+  height: 400px;
+  color: #fff;
+  background-color: black;
+  position: absolute;
+  z-index: 10;
+  padding: 20px;
+  
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h3{
+    color: #fff;
+    margin-bottom: 10px;
+  }
+`
+export const Card = styled.div`
+  width: 480px;
+  height: 400px;
+  background: black;
+  cursor: pointer;
+  transition: 0.3s;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  h1{
+    margin-top: 20px;
+    font-size: 25px;
+  }
+
+  &:hover ${CardHover} {
+      display: flex;
+  }
 `
