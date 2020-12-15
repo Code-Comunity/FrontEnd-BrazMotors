@@ -13,7 +13,20 @@ import Teste from '../assets/testePreven.png';
 //Whats
 import WhatsApp from "../components/WhatsApp";
 
-export default function Index() {
+export const getStaticProps = async () => {
+    const response = await fetch('http://teste-brazmotors.herokuapp.com/acessorios')
+    const data = await response.json();
+  
+    return {
+      props: {
+        acessorio: data,
+      }
+    }
+    
+  }
+  
+
+export default function Index(acessorio) {
   return (
     <>
         <Head>
@@ -22,6 +35,7 @@ export default function Index() {
         <MenuComponent />
         <Container>
         <WhatsApp />
+        
             <h2>Acessórios automotivos:</h2>
             <hr style={{width:"100px",
              marginTop:"5px",

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const NavBar = styled.div`
-  background-color: #282525;
+  background-color: black;
   width: 100%;
   height: max-content;
   position: fixed;
@@ -12,6 +12,13 @@ export const NavBar = styled.div`
 
   #Logo {
     width: 150px;
+  }
+  @media (max-width: 700px){
+    padding: 10px 30px;
+
+    input{
+      display: none;
+    }
   }
 `;
 
@@ -33,4 +40,10 @@ export const OptionsNavbar = styled.ul`
   a:hover {
     color: #ff5555;
   }
+  @media(max-width: 500px){
+    display: none;
+  } 
+  
 `;
+
+

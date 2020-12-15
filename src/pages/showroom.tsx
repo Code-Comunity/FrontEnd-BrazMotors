@@ -43,7 +43,7 @@ export default function Index({marca}) {
 
   marca.map(e=>{
     return console.log(e)
-  })
+  })  
 
   return (
     <div>

@@ -18,8 +18,22 @@ import WhatsApp from "../components/WhatsApp";
 import Modal from '../components/Modal.Component';
 import FooterComponent from '../components/FooterComponent';
 
-export default function Index() {
 
+
+export const getStaticProps = async () => {
+    const response = await fetch('http://teste-brazmotors.herokuapp.com/marcas')
+    const data = await response.json();
+  
+    return {
+      props: {
+        marca: data,
+      }
+    }
+    
+  }
+
+
+export default function Index() {
 
   return (
     <>

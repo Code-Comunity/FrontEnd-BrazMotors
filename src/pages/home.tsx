@@ -38,6 +38,7 @@ export const getStaticProps = async () => {
 
   const response = await fetch('https://teste-brazmotors.herokuapp.com/carros/')
   const data = await response.json();
+  console.log(data)
 
   return {
     props: {
@@ -46,8 +47,8 @@ export const getStaticProps = async () => {
   }
 }
 
-export default function Home({carros}) {
-  console.log(carros)
+export default function Home({carro}) {
+  console.log(carro)
   return (
     <>
       <Head>
@@ -73,13 +74,13 @@ export default function Home({carros}) {
           </h2>
         </FirstSection>
         <SecondSection>
-          {CardsHome.map(
+          {carro.map(
             (e): JSX.Element => (
               <Card key={e.id}>
-                <CardImage uri={e.img} />
+                <CardImage uri={e.imagem} />
                 <CardInfo>
-                  <h4>{e.titulo}</h4>
-                  <h5>{e.preço.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</h5>
+                  <h4>{e.nome}</h4>
+                  <h5>{e.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</h5>
                 </CardInfo>
               </Card>
             )
