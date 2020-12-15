@@ -10,6 +10,8 @@ import { ButtonBlackBorder } from '../components/styleds/Buttons.Styled';
 
 import Teste from '../assets/testePreven.png';
 
+import { CardHover } from '../components/styleds/Preventiva.Styled';
+
 //Whats
 import WhatsApp from "../components/WhatsApp";
 
@@ -26,7 +28,7 @@ export const getStaticProps = async () => {
   }
   
 
-export default function Index(acessorio) {
+export default function Index({acessorio}) {
   return (
     <>
         <Head>
@@ -43,7 +45,13 @@ export default function Index(acessorio) {
              color:"red",
              marginBottom:"20px"}}></hr>
            <CardsContainer>
-                <Card>
+           {acessorio.map((e) => (
+                <Card key={e.id}>
+                    <CardHover id="cardHover">
+                        <h3>{e.titulo}</h3>
+                        <p>{e.descricao}</p>
+                                
+                    </CardHover>
                     <CardTop>
                         <Image
                             src={Teste}
@@ -53,45 +61,10 @@ export default function Index(acessorio) {
                         />
                     </CardTop>
 
-                    <h1>Acessórios automotivos</h1>
+                    <h1>{e.titulo}</h1>
                 </Card>
-                <Card>
-                    <CardTop>
-                        <Image
-                            src={Teste}
-                            alt="Picture of the author"
-                            width={480}
-                            height={315}
-                        />
-                    </CardTop>
-
-                    <h1>Revisão Preventiva</h1>
-                </Card>
-                <Card>
-                    <CardTop>
-                        <Image
-                            src={Teste}
-                            alt="Picture of the author"
-                            width={480}
-                            height={315}
-                        />
-                    </CardTop>
-
-                    <h1>Revisão Preventiva</h1>
-                </Card>
-                <Card>
-                    <CardTop>
-                        <Image
-                            src={Teste}
-                            alt="Picture of the author"
-                            width={480}
-                            height={315}
-                        />
-                    </CardTop>
-
-                    <h1>Revisão Preventiva</h1>
-                </Card>
-           </CardsContainer>
+             ))}
+            </CardsContainer>   
            <ContainerForms>
                <h1>Entre em contato:</h1>
                <InputsBox>
