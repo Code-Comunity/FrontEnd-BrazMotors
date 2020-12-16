@@ -75,14 +75,16 @@ export default function Home({carro}) {
         </FirstSection>
         <SecondSection>
           {carro.map(
-            (e): JSX.Element => (
-              <Card key={e.id}>
+            (e:any): JSX.Element => (
+            <Link href="/test/[id]" as={`/test/${e._id}`}>
+              <Card key={e._id}>
                 <CardImage uri={e.imagem} />
                 <CardInfo>
                   <h4>{e.nome}</h4>
                   <h5>{e.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</h5>
                 </CardInfo>
               </Card>
+              </Link>
             )
           )}
         </SecondSection>

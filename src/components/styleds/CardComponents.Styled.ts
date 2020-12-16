@@ -15,11 +15,12 @@ export const Card = styled.div`
 
 export const CardImage = styled.div`
   width: 100%;
-  height: 80%;
+  height: 300px;
   background:#282a36;
   background-image: url(${prop => prop.uri || "https://media.istockphoto.com/vectors/car-flat-icon-vector-id1144092062?b=1&k=6&m=1144092062&s=612x612&w=0&h=zMH-_u3shpUjbCFQiewi6AhSItMmtI-MMVsayqeHRpc="});
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   border: solid #ff5555;
   cursor: pointer;
   :hover{

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const QualidadesContainer = styled.div`
     width: 65%;
     height: 400px;
-
+    margin-top: 50px;
     display: flex;
     justify-content: space-around;
 `
@@ -78,4 +78,11 @@ export const HeroImageBottomPart = styled.div`
     z-index: 5;
     background-attachment: fixed;
     background-position: 0px 0px;
+`;
+
+export const HeroImageTopPart = styled.div`
+    width: 70%;
+    height: 500px;
+    background: gray;
+    margin: 50px 0px;
 `;

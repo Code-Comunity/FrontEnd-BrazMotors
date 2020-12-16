@@ -16,13 +16,14 @@ import Simples from '../assets/simples.png';
 import WhatsApp from "../components/WhatsApp";
 
 //styled
-import { Qualidade, QualidadesContainer, BlocoForm, LeftBlocoForm, RightBlocoForm, HeroImageBottomPart } from "../components/styleds/Financiamento.Styled";
+import { Qualidade, QualidadesContainer, BlocoForm, LeftBlocoForm, RightBlocoForm, HeroImageBottomPart, HeroImageTopPart } from "../components/styleds/Financiamento.Styled";
 
 import { FormComponent } from '../components/FormComponent';
 import { Footer } from '../components/styleds/Layout.Styled';
 import FooterComponent from '../components/FooterComponent';
 
 const bg = "https://images.pexels.com/photos/193999/pexels-photo-193999.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+const headerFinanciamento = "https://blog.rebel.com.br/wp-content/uploads/2019/02/1-13.jpg"
 
 export default function Index() {
   return (
@@ -36,6 +37,11 @@ export default function Index() {
         <WhatsApp />
         <h2>Financiamento</h2>
         <hr style={{ width: "100px", marginTop: "5px", border: "2px solid red", color: "red", marginBottom: "20px" }}></hr>
+
+        <HeroImageTopPart>
+            <img src={headerFinanciamento} />
+
+        </HeroImageTopPart>
         <QualidadesContainer>
           <Qualidade>
             <span><AiOutlineForm /></span>

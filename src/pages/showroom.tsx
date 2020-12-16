@@ -21,6 +21,7 @@ import { IoCall, IoLocationSharp, IoMailSharp } from 'react-icons/io5';
 
 //Whats
 import WhatsApp from "../components/WhatsApp";
+import { CardImage } from '../components/styleds/CardComponents.Styled';
 
 export const getStaticProps = async () => {
   const response = await fetch('http://teste-brazmotors.herokuapp.com/marcas')
@@ -56,15 +57,11 @@ export default function Index({marca}) {
           <WhatsApp />
             <CardsContainer>
             {marca.map((e) => (
-                <Card key={e.id}>
-                    {/* <Image
-                        src={LogoMarca}
-                        alt="Picture of the author"
-                        width={500}
-                        height={500}
-                    /> */}
-                    <h1>{e.marca}</h1>
-                </Card>
+                <Link href="./marcas/[id]" as={`./marcas/${e.id}`}>
+                        <CardImage uri={e.img} key={e.id}>
+                        </CardImage>
+                </Link>
+
             ))}
             </CardsContainer>
         </Container>
