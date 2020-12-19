@@ -6,22 +6,33 @@ import Link from 'next/link'
 
 import Axios from 'axios'
 
-import MenuComponent from "../components/MenuComponent";
+import MenuComponent from "../../components/MenuComponent";
 
-import { Container, Content, UpSide, DownSide, Left, Right, LeftDown } from '../components/styleds/Car.Styled'
+import { Container, Content, UpSide, DownSide, Left, Right, LeftDown } from '../../components/styleds/Car.Styled'
 
-import { InputsBox, Input, SmallInput, InputHour } from "../components/styleds/Inputs.Styled";
-import SimpleSlider from "../components/Slide";
-import { ButtonBlack } from '../components/styleds/Buttons.Styled';
-import { Footer, ItemsFooter } from '../components/styleds/Layout.Styled';
+import { InputsBox, Input, SmallInput, InputHour } from "../../components/styleds/Inputs.Styled";
+import SimpleSlider from "../../components/Slide";
+import { ButtonBlack } from '../../components/styleds/Buttons.Styled';
+import { Footer, ItemsFooter } from '../../components/styleds/Layout.Styled';
 import { IoCall, IoLocationSharp, IoMailSharp } from 'react-icons/io5';
 
 //Whats
-import WhatsApp from "../components/WhatsApp";
+import WhatsApp from "../../components/WhatsApp";
+import { GetStaticProps, GetStaticPaths } from 'next'
 
- export const getStaticProps = async (context) => {
 
- const id:any = context.params
+export const getStaticPaths: GetStaticPaths  = async () => {
+    const response = await fetch(`https://teste-brazmotors.herokuapp.com/carros`)
+    const data = await response.json()
+
+    const paths = data.map((post: { _id: any }) => ({ params: { id: post._id }, }))
+
+    return { paths, fallback: true }
+}
+
+ export const getStaticProps: GetStaticProps = async (context) => {
+
+ const id:any = context.params.id
 
    const response = await fetch(`https://teste-brazmotors.herokuapp.com/carros/${id}`)
    const data = await response.json();

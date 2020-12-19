@@ -8,3 +8,9 @@ declare module 'styled-components' {
   export interface DefaultTheme extends Theme {}
 }
 //d.ts é a extensão de arquivo responsavel por definir coisas.
+
+declare module "react" {
+  interface HTMLAttributes<T> extends DOMAttributes<T> {
+    css?: CSSProp;
+  }
+}

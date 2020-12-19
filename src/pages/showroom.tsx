@@ -57,11 +57,13 @@ export default function Index({marca}) {
           <WhatsApp />
             <CardsContainer>
             {marca.map((e) => (
-                <Link href="./marcas/[id]" as={`./marcas/${e.id}`}>
-                        <CardImage uri={e.img} key={e.id}>
+                
+                <Link href="./marcas/modelos/[id]" as={`./marcas/modelos/${e.id}`}>
+                        <CardImage uri={e.img} >
+                            
                         </CardImage>
                 </Link>
-
+                
             ))}
             </CardsContainer>
         </Container>
