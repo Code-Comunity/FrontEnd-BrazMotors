@@ -8,9 +8,10 @@ import {
   FirstSection,
   SecondSection,
   CentralizeText,
-  Footer,
   ItemsFooter,
 } from "../components/styleds/Layout.Styled";
+
+import Footer from '../components/FooterComponent'
 import { NavBar, OptionsNavbar } from "../components/styleds/Navbar.Styled";
 import { Card, CardImage, CardInfo } from "../components/styleds/CardComponents.Styled";
 import { ContainerWhats } from "../components/styleds/WhatsApp.Styled";

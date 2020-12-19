@@ -16,7 +16,7 @@ import LogoMarca from "../assets/logoMarca.png";
 
 //API
 import { CardsHome } from "./api/fakeApi";
-import { Footer, ItemsFooter } from '../components/styleds/Layout.Styled';
+import Footer from '../components/FooterComponent'
 import { IoCall, IoLocationSharp, IoMailSharp } from 'react-icons/io5';
 
 //Whats

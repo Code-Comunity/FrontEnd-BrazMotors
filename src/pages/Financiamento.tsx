@@ -19,8 +19,7 @@ import WhatsApp from "../components/WhatsApp";
 import { Qualidade, QualidadesContainer, BlocoForm, LeftBlocoForm, RightBlocoForm, HeroImageBottomPart, HeroImageTopPart } from "../components/styleds/Financiamento.Styled";
 
 import { FormComponent } from '../components/FormComponent';
-import { Footer } from '../components/styleds/Layout.Styled';
-import FooterComponent from '../components/FooterComponent';
+import Footer from '../components/FooterComponent'
 
 const bg = "https://images.pexels.com/photos/193999/pexels-photo-193999.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
 const headerFinanciamento = "https://blog.rebel.com.br/wp-content/uploads/2019/02/1-13.jpg"
@@ -74,7 +73,7 @@ export default function Index() {
           <HeroImageBottomPart style={{backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.9)),url(${bg})` }}>
            
           </HeroImageBottomPart>
-        <FooterComponent />
+        <Footer />
       </Container>
     </>
   )
