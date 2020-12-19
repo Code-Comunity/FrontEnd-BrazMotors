@@ -1,54 +1,72 @@
 import React, { useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
+import Image from 'next/image';
 import {
   Container,
   Header,
   FirstSection,
   SecondSection,
   CentralizeText,
-  Footer,
   ItemsFooter,
-} from "../components/Layout";
-import { NavBar, OptionsNavbar } from "../components/Navbar";
-import { Card, CardImage, CardInfo } from "../components/CardComponents";
+} from "../components/styleds/Layout.Styled";
+
+import Footer from '../components/FooterComponent'
+import { NavBar, OptionsNavbar } from "../components/styleds/Navbar.Styled";
+import { Card, CardImage, CardInfo } from "../components/styleds/CardComponents.Styled";
+import { ContainerWhats } from "../components/styleds/WhatsApp.Styled";
 const Logo =
   "https://static.wixstatic.com/media/f55eb9_75da84b90d074eb492e51266a5110559~mv2.png/v1/fill/w_284,h_87,al_c,q_85,usm_0.66_1.00_0.01/logo_02.webp";
 
+import MenuComponent from "../components/MenuComponent";
+
+import Banner from "../assets/1.png";
 //Icons
 import { IoMailSharp, IoLocationSharp, IoCall } from "react-icons/io5";
 
+//Whats
+import WhatsApp from "../components/WhatsApp";
+
 //APIS
 import { CardsHome } from "./api/fakeApi";
+
 //import axios from "axios";
 
-export default function Home() {
+// const url = window.location.pathname;
+// const splitURL = url.split("/");
+
+export const getStaticProps = async () => {
+
+  const response = await fetch('https://teste-brazmotors.herokuapp.com/carros/')
+  const data = await response.json();
+  console.log(data)
+
+  return {
+    props: {
+      carro: data,
+    }
+  }
+}
+
+export default function Home({carro}) {
+  console.log(carro)
   return (
     <>
       <Head>
         <title>HomePage</title>
       </Head>
-      <NavBar>
-        <img id="Logo" src={Logo} alt="logo" />
-        <OptionsNavbar>
-          <li>
-            <Link href="#">Home</Link>
-          </li>
-          <li>
-            <Link href="#">Mecanica Preventiva</Link>
-          </li>
-          <li>
-            <Link href="#">Catalogo</Link>
-          </li>
-        </OptionsNavbar>
-      </NavBar>
+      <MenuComponent />
       <Container>
         <Header>
-          <img
-            style={{ objectFit: "cover" }}
-            src="https://static.wixstatic.com/media/ff6b3b_4eb252be33414a11a847a55a67505e4b~mv2.png/v1/fill/w_1219,h_295,al_c,q_85/ff6b3b_4eb252be33414a11a847a55a67505e4b~mv2.webp"
+          <Image
+            src={Banner}
+            alt="Picture of the author"
+            width={500}
+            height={500}
           />
         </Header>
+
+        <WhatsApp />
 
         <FirstSection>
           <h1>Escolha o que combina com você</h1>
@@ -57,15 +75,17 @@ export default function Home() {
           </h2>
         </FirstSection>
         <SecondSection>
-          {CardsHome.map(
-            (e): JSX.Element => (
-              <Card key={e.id}>
-                <CardImage uri={e.img} />
+          {carro.map(
+            (e:any): JSX.Element => (
+            <Link href="/test/[id]" as={`/test/${e._id}`}>
+              <Card key={e._id}>
+                <CardImage uri={e.imagem} />
                 <CardInfo>
-                  <h4>{e.titulo}</h4>
-                  <h5>{e.preço}</h5>
+                  <h4>{e.nome}</h4>
+                  <h5>{e.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</h5>
                 </CardInfo>
               </Card>
+              </Link>
             )
           )}
         </SecondSection>
@@ -115,6 +135,6 @@ export default function Home() {
           </ItemsFooter>
         </Footer>
       </Container>
-    </>
+      </>
   );
 }
