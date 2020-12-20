@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const NavBar = styled.div`
-  background-color: black;
+  background-color: white;
   width: 100%;
   height: max-content;
   position: fixed;
@@ -9,9 +9,11 @@ export const NavBar = styled.div`
   justify-content: space-between;
   padding: 10px 90px;
   z-index: 15;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+ 
 
   #Logo {
-    width: 150px;
+    width: 41px;
   }
   @media (max-width: 700px){
     padding: 10px 30px;
@@ -25,7 +27,7 @@ export const NavBar = styled.div`
 export const ShowroomDrop = styled.div`
   width: 110px;
   height: max-content;
-  background-color: black;
+  background-color: white;
   position: absolute;
   right: 400px;
 
@@ -54,7 +56,7 @@ export const ShowroomHover = styled.div`
 export const MecanicaDrop = styled.div`
   width: 190px;
   height: max-content;
-  background-color: black;
+  background-color: white;
   position: absolute;
   right: 220px;
 
@@ -93,7 +95,7 @@ export const OptionsNavbar = styled.ul`
   }
   a {
     text-decoration: none;
-    color: white;
+    color: #FF5555;
     transition: 0.3s;
   }
   a:hover {

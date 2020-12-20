@@ -19,7 +19,7 @@ export const Header = styled.div`
 `;
 // MAIN PART
 export const FirstSection = styled.div`
-  background-color: #fff;
+  background-color: #F2F3F8;
   width: 100%;
   height: max-content;
   padding: 70px 100px;
@@ -43,12 +43,12 @@ export const FirstSection = styled.div`
 `;
 
 export const SecondSection = styled.div`
-  background-color: #fff;
+  background-color: #F2F3F8;
   width: 100%;
   height: max-content;
   padding: 70px 100px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 15px;
   align-content: center;
   justify-items: center;
@@ -64,7 +64,7 @@ export const CentralizeText = styled.div`
   width: 100%;
   height: max-content;
   padding: 70px 100px;
-  background-color: #fff;
+  background-color: #F2F3F8;
   display: flex;
   flex-direction: column;
   align-items: center;

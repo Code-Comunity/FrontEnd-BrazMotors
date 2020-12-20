@@ -3,7 +3,6 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 
-
 //imports de components
 import MenuComponent from "../components/MenuComponent";
 import { Container, CardsContainer, Card } from "../components/styleds/Showroom.Styled";
@@ -19,8 +18,12 @@ import { CardsHome } from "./api/fakeApi";
 import Footer from '../components/FooterComponent'
 import { IoCall, IoLocationSharp, IoMailSharp } from 'react-icons/io5';
 
+
+
 //Whats
 import WhatsApp from "../components/WhatsApp";
+import FooterComponent from '../components/FooterComponent';
+import { CardImage } from '../components/styleds/CardComponents.Styled';
 
 export const getStaticProps = async () => {
   const response = await fetch('http://teste-brazmotors.herokuapp.com/marcas')
@@ -37,7 +40,7 @@ export const getStaticProps = async () => {
 
 
 
-export default function Index({marca}) {
+export default function Showroom({marca}): JSX.Element {
 
   console.log(marca)
 
@@ -56,39 +59,18 @@ export default function Index({marca}) {
           <WhatsApp />
             <CardsContainer>
             {marca.map((e) => (
-                <Card key={e.id}>
-                    {/* <Image
-                        src={LogoMarca}
-                        alt="Picture of the author"
-                        width={500}
-                        height={500}
-                    /> */}
-                    <h1>{e.marca}</h1>
-                </Card>
+                    <Link href="./marcas/modelos/[id]" as={`./marcas/modelos/${e.id}`}>
+                        <CardImage uri={e.img} >
+                            
+                        </CardImage>
+                </Link>
             ))}
             </CardsContainer>
         </Container>
 
-        <Footer>
-          <ItemsFooter>
-            <IoMailSharp />
-            <a href="#">brazmotorsrj@gmail.com</a>
-          </ItemsFooter>
-          <ItemsFooter>
-            <IoLocationSharp />
-            <span style={{ width: 200 }}>
-              Av. Pref. Dulcídio Cardoso, 2900 - Barra da Tijuca, Rio de Janeiro
-              - RJ, 22631-052, Brasil
-            </span>
-          </ItemsFooter>
-          <ItemsFooter>
-          <IoCall />
-            <ul>
-              <li>(21) 96489-6555</li>
-              <li>(21) 2439-8048</li>
-            </ul>
-          </ItemsFooter>
-        </Footer>
+       <FooterComponent>
+
+       </FooterComponent>
     </div>
   )
 }
