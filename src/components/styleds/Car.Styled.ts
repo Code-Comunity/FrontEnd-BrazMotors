@@ -14,6 +14,9 @@ export const Container = styled.div`
 
 export const Content = styled.div`
     width: 80%;
+    height: 100%;
+    margin-top: 160px;
+    margin-bottom: 100px;
     
     display: flex;
     flex-direction: column;
@@ -21,7 +24,8 @@ export const Content = styled.div`
 
 export const UpSide = styled.div`
     width: 100%;
-    height: 50%;
+    height: 100%;
+    
 
     display: flex;
     flex-direction: row;
@@ -51,7 +55,7 @@ export const Slide = styled.div`
 `
 
 export const Right = styled.div`
-    width: 50%;
+    width: 100%;
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -60,7 +64,7 @@ export const Right = styled.div`
 `;
 
 export const LeftDown = styled.div`
-    width: 50%;
+    width: 100%;
     margin-top: 20px;
   
 

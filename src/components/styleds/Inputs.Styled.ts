@@ -19,7 +19,7 @@ export const InputHour = styled.select`
  width: 100%;
   height: 50px;
   background: white;
-  border: solid 1px black;
+  border: solid 1px #ff5555;
   margin-top: 20px;
   padding-left: 15px;
   outline: none;
@@ -38,13 +38,13 @@ export const InputsBox = styled.div`
 `;
 
 export const Input = styled.input`
-  width: 50%;
+  width: 100%;
   height: 50px;
   background: white;
   padding-left: 15px;
   outline: none;
   background: #FFFFFF;
-  border: 1px solid #000000;
+  border: 1px solid #ff5555;
   box-sizing: border-box;
   margin: 15px;
 
@@ -60,6 +60,6 @@ export const SmallInput = styled.input`
   padding-left: 15px;
   outline: none;
   background: #FFFFFF;
-  border: 1px solid #000000;
+  border: 1px solid #ff5555;
   box-sizing: border-box;
 `;
