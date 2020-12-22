@@ -63,6 +63,7 @@ export const CardHover = styled.div`
   align-items: center;
   justify-content: center;
 
+  transition: 1s;
   h3{
     color: #fff;
     margin-bottom: 10px;
@@ -97,5 +98,6 @@ export const Card = styled.div`
 
   &:hover ${CardHover} {
       display: flex;
+      transition: 1s;
   }
 `

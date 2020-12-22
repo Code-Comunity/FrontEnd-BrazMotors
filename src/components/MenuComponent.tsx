@@ -28,7 +28,7 @@ export default function MenuComponent() {
             </li>
               <ShowroomDrop>
                 <li>
-                  <Link href="/showroom">Estoque</Link>
+                  <Link href="/home">Estoque</Link>
                 </li>
                 <li>
                   <Link href="/showroom">Catalogo 0km</Link>

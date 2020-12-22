@@ -7,18 +7,21 @@ export const Container = styled.div`
     background-color: #fff;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 `;
 
 export const CardsContainer = styled.div`
-    width: 70%;
-    height: 80%;
+    width: 100%;
+    height: 300px;
+    justify-items: center;
+    align-items: center;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-items: inherit;
-
+    filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 9px;
     @media (max-width: 700px) {
         display: flex;
         flex-direction: row;

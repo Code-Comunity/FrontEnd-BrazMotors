@@ -76,35 +76,15 @@ export default function Home({carro}) {
         </Header>
 
         <WhatsApp />
-        <CardsContainerHome>
-          <CardInfoHome>
-            <IconInfo />
-            <h1>Mecanica Automotiva</h1>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
-
-          </CardInfoHome>
-
-          <CardInfoHome>
-            <IconInfo />
-            <h1>Mecanica Automotiva</h1>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
-
-          </CardInfoHome>
-
-          <CardInfoHome>
-            <IconInfo />
-            <h1>Mecanica Automotiva</h1>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
-
-          </CardInfoHome>
-        </CardsContainerHome>
+       
         <FirstSection>
-          <h1>Nossos carros</h1>
+          <h1 style={{marginTop:"50px", fontSize: '1.9rem'}} >Nossos carros</h1>
           <hr style={{ width: "100px", marginTop: "5px", border: "2px solid red", color: "red", marginBottom: "20px" }}></hr>
         </FirstSection>
         <SecondSection>
             {carro.map(
               (e): JSX.Element => (
+                <Link href="/car/[id]" as={`/car/${e._id}`}>
                 <Card key={e.id}>
                   <CardInfo>
                     <CardSeparaTop>
@@ -118,11 +98,12 @@ export default function Home({carro}) {
                   </CardInfo>
                   <CardImage uri={e.imagem} />
                 </Card>
+                </Link>
               )
             )}      
         </SecondSection>
 
-          <h1 style={{marginTop:"50px"}} >Compre já!</h1>
+          <h1 style={{marginTop:"250px", fontSize: '1.9rem'}} >Temos muito mais:</h1>
           <hr style={{ width: "100px", marginTop: "5px", border: "2px solid red", color: "red", marginBottom: "20px" }}></hr>
           <CardContainerHome>
             <CardsInfoBot>
@@ -141,6 +122,29 @@ export default function Home({carro}) {
                 <p>Encontrou algum serviço que precisa? Entre em contato conosco!, você pode fazer tudo isso online, aqui mesmo no nosso site,</p>
             </CardsInfoBot>
           </CardContainerHome>
+
+          <CardsContainerHome>
+          <CardInfoHome>
+            <IconInfo />
+            <h1>Mecanica Preventiva</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+
+          </CardInfoHome>
+
+          <CardInfoHome>
+            <IconInfo />
+            <h1>Mecanica Especializada</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+
+          </CardInfoHome>
+
+          <CardInfoHome>
+            <IconInfo />
+            <h1>Estética Automotiva</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+
+          </CardInfoHome>
+        </CardsContainerHome>
                 
         <Footer />
       </Container>

@@ -57,7 +57,12 @@ export default function Showroom({marca}): JSX.Element {
 
         <Container>
           <WhatsApp />
+
+          <h1 style={{fontSize: '1.9rem', color: "#FF5555" }} >Temos muito mais:</h1>
+          <hr style={{ width: "100px", marginTop: "5px", border: "2px solid #FF5555", color: "#FF5555", marginBottom: "20px" }}></hr>
+          
             <CardsContainer>
+
             {marca.map((e) => (
                     <Link href="./marcas/modelos/[id]" as={`./marcas/modelos/${e.id}`}>
                         <CardImage uri={e.img} >

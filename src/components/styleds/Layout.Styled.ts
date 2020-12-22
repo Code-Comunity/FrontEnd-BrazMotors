@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 100VW;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,14 +47,13 @@ export const FirstSection = styled.div`
 `;
 
 export const SecondSection = styled.div`
-  width: 70%;
+  width: 90%;
   height: max-content;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 40px;
   align-content: center;
   justify-items: center;
-
   @media (max-width: 700px){
     display: flex;
     flex-direction: column;
@@ -115,6 +114,7 @@ export const CardsContainerHome = styled.div`
   width: 80%;
   height: 400px;
   margin-top: 70px; 
+  margin-bottom: 100px;
 
   display: flex;
   justify-content: space-around;
@@ -122,7 +122,7 @@ export const CardsContainerHome = styled.div`
 `;
 
 export const CardInfoHome = styled.div`
-  width: 375px;
+  width: 300px;
   height: 375px;
   padding: 15px;
   background-color: #fff;
@@ -135,20 +135,22 @@ export const CardInfoHome = styled.div`
   flex-direction: column;
 
   h1{
-    font-size: 29px;
+    font-size: 1.5rem;
+    text-align: justify;
     color: #282A36;
     margin-bottom: 15px;
     margin-top: 15px;
   }
   p{
-    font-size: 17px;
+    font-size: 1.2rem;
     color: black;
     text-align: left;
+    
   }
 `
 export const IconInfo = styled.div`
-  width: 65px;
-  height: 65px;
+  width: 35px;
+  height: 35px;
   background-color: #FF5555;
   border-radius: 9px;
 `
