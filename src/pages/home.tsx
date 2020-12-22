@@ -1,120 +1,153 @@
 import React, { useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
+import Image from 'next/image';
 import {
   Container,
   Header,
   FirstSection,
   SecondSection,
   CentralizeText,
-  Footer,
   ItemsFooter,
-} from "../components/Layout";
-import { NavBar, OptionsNavbar } from "../components/Navbar";
-import { Card, CardImage, CardInfo } from "../components/CardComponents";
+  CardsContainerHome,
+  CardInfoHome,
+  IconInfo,
+
+} from "../components/styleds/Layout.Styled";
+
+
+import Footer from '../components/FooterComponent'
+import { NavBar, OptionsNavbar } from "../components/styleds/Navbar.Styled";
+import { Card, CardImage, CardInfo, CardSeparaBot, CardSeparaTop,   CardContainerHome, CardsInfoBot } from "../components/styleds/CardComponents.Styled";
+import { ContainerWhats } from "../components/styleds/WhatsApp.Styled";
 const Logo =
   "https://static.wixstatic.com/media/f55eb9_75da84b90d074eb492e51266a5110559~mv2.png/v1/fill/w_284,h_87,al_c,q_85,usm_0.66_1.00_0.01/logo_02.webp";
 
+import MenuComponent from "../components/MenuComponent";
+
+import Banner from "../assets/1.png";
 //Icons
-import { IoMailSharp, IoLocationSharp, IoCall } from "react-icons/io5";
+import { IoMailSharp, IoLocationSharp, IoCall, IoCarSport } from "react-icons/io5";
+import { GrConfigure } from "react-icons/gr";
+import { BiDollar } from "react-icons/bi"
+import { TiSpanner } from "react-icons/ti"
+
+//Whats
+import WhatsApp from "../components/WhatsApp";
 
 //APIS
 import { CardsHome } from "./api/fakeApi";
+
+
 //import axios from "axios";
 
-export default function Home() {
+// const url = window.location.pathname;
+// const splitURL = url.split("/");
+
+export const getStaticProps = async () => {
+
+  const response = await fetch('https://teste-brazmotors.herokuapp.com/carros/')
+  const data = await response.json();
+  console.log(data)
+
+  return {
+    props: {
+      carro: data,
+    }
+  }
+}
+
+export default function Home({carro}) {
+  console.log(carro)
   return (
     <>
       <Head>
         <title>HomePage</title>
       </Head>
-      <NavBar>
-        <img id="Logo" src={Logo} alt="logo" />
-        <OptionsNavbar>
-          <li>
-            <Link href="#">Home</Link>
-          </li>
-          <li>
-            <Link href="#">Mecanica Preventiva</Link>
-          </li>
-          <li>
-            <Link href="#">Catalogo</Link>
-          </li>
-        </OptionsNavbar>
-      </NavBar>
+      <MenuComponent />
       <Container>
         <Header>
-          <img
-            style={{ objectFit: "cover" }}
-            src="https://static.wixstatic.com/media/ff6b3b_4eb252be33414a11a847a55a67505e4b~mv2.png/v1/fill/w_1219,h_295,al_c,q_85/ff6b3b_4eb252be33414a11a847a55a67505e4b~mv2.webp"
+          <Image
+            src={Banner}
+            alt="Picture of the author"
+            width={500}
+            height={500}
           />
         </Header>
 
+        <WhatsApp />
+       
         <FirstSection>
-          <h1>Escolha o que combina com você</h1>
-          <h2 style={{ borderBottom: "solid 3px #ff5555", paddingBottom: 15 }}>
-            CARROS INCRÍVEIS COM PREÇOS IMPERDÍVEIS
-          </h2>
+          <h1 style={{marginTop:"50px", fontSize: '1.9rem'}} >Nossos carros</h1>
+          <hr style={{ width: "100px", marginTop: "5px", border: "2px solid red", color: "red", marginBottom: "20px" }}></hr>
         </FirstSection>
         <SecondSection>
-          {CardsHome.map(
-            (e): JSX.Element => (
-              <Card key={e.id}>
-                <CardImage uri={e.img} />
-                <CardInfo>
-                  <h4>{e.titulo}</h4>
-                  <h5>{e.preço}</h5>
-                </CardInfo>
-              </Card>
-            )
-          )}
-        </SecondSection>
-        <CentralizeText>
-          <h1 style={{ borderBottom: "solid 3px #ff5555", paddingBottom: 15 }}>
-            Por quê nós?
-          </h1>
+            {carro.map(
+              (e): JSX.Element => (
+                <Link href="/car/[id]" as={`/car/${e._id}`}>
+                <Card key={e.id}>
+                  <CardInfo>
+                    <CardSeparaTop>
+                      <h4>{e.nome}</h4>
+                      <h5>{e.marca}</h5>
+                    </CardSeparaTop>
 
-          <p style={{ width: "70%", textAlign: "center" }}>
-            Por que nós? São mais de 10 anos de uma história de sucesso e
-            dedicação aos nossos clientes. ​ Nós, da Brazmotors, trabalhamos com
-            consignados, ajudando a promover a venda do seu carro com agilidade
-            e segurança, onde o mesmo não perde o seu valor de mercado e,
-            atingir um objetivo melhor na venda de seu veículo. Através do
-            contrato de vendas, assumimos a responsabilidade de cuidar das
-            campanhas de vendas, promovendo anúncios para o seu carro em
-            diversas plataformas, como: WebMotors, Olx, Instagram, Facebook e
-            outros. Zelamos pela transparência, informando aos nossos clientes
-            todo o processo e etapas de venda do seu veículo. Nossas modalidades
-            são: venda, troca e financiamentos. A partir da modalidade escolhida
-            pelo cliente, assumimos a responsabilidade, junto ao Detran,
-            protegendo sua carteira de multas e danos futuros e, além disso, o
-            valor contratado é liberado de forma imediata e integral. Nossos
-            especialistas estarão disponíveis para que a venda do seu veículo
-            aconteça de forma rápida e segura... Contate-nos e nós iremos te
-            ajudar!
-          </p>
-        </CentralizeText>
-        <Footer>
-          <ItemsFooter>
-            <IoMailSharp />
-            <a href="#">brazmotorsrj@gmail.com</a>
-          </ItemsFooter>
-          <ItemsFooter>
-            <IoLocationSharp />
-            <span style={{ width: 200 }}>
-              Av. Pref. Dulcídio Cardoso, 2900 - Barra da Tijuca, Rio de Janeiro
-              - RJ, 22631-052, Brasil
-            </span>
-          </ItemsFooter>
-          <ItemsFooter>
-          <IoCall />
-            <ul>
-              <li>(21) 96489-6555</li>
-              <li>(21) 2439-8048</li>
-            </ul>
-          </ItemsFooter>
-        </Footer>
+                    <CardSeparaBot>
+                      <h6>{e.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</h6>
+                    </CardSeparaBot>
+                  </CardInfo>
+                  <CardImage uri={e.imagem} />
+                </Card>
+                </Link>
+              )
+            )}      
+        </SecondSection>
+
+          <h1 style={{marginTop:"250px", fontSize: '1.9rem'}} >Temos muito mais:</h1>
+          <hr style={{ width: "100px", marginTop: "5px", border: "2px solid red", color: "red", marginBottom: "20px" }}></hr>
+          <CardContainerHome>
+            <CardsInfoBot>
+                <span><IoCarSport /></span>
+                <h1>Belos carros</h1>
+                <p>Nós temos os mais belos carros, que combina com você, e com um preço que cabe no seu bolso.</p>
+            </CardsInfoBot>
+            <CardsInfoBot>
+                <span> <TiSpanner /> </span>
+                <h1>Centro automotivo</h1>
+                <p>Nós também temos mecânica preventiva e especializada, com credibilidade e confiança</p>
+            </CardsInfoBot>
+            <CardsInfoBot>
+                <span><BiDollar /></span>
+                <h1>Financie online</h1>
+                <p>Encontrou algum serviço que precisa? Entre em contato conosco!, você pode fazer tudo isso online, aqui mesmo no nosso site,</p>
+            </CardsInfoBot>
+          </CardContainerHome>
+
+          <CardsContainerHome>
+          <CardInfoHome>
+            <IconInfo />
+            <h1>Mecanica Preventiva</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+
+          </CardInfoHome>
+
+          <CardInfoHome>
+            <IconInfo />
+            <h1>Mecanica Especializada</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+
+          </CardInfoHome>
+
+          <CardInfoHome>
+            <IconInfo />
+            <h1>Estética Automotiva</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+
+          </CardInfoHome>
+        </CardsContainerHome>
+                
+        <Footer />
       </Container>
-    </>
+      </>
   );
 }
