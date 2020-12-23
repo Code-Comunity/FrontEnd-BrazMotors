@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { GetStaticPaths, GetStaticProps } from 'next'
-import { Container, CardCarro, TodosOsCarros } from '../../../components/styleds/Modelos.Styled'
+import { Container, CardCarro, TodosOsCarros, CardCarroHover } from '../../../components/styleds/Modelos.Styled'
 import MenuComponent from "../../../components/MenuComponent";
 
 export default function Carros({ carros }) {
@@ -29,7 +29,11 @@ export default function Carros({ carros }) {
               <Link href="/car/[id]" as={`/car/${e.id}`}>
                 <CardCarro key={e.id} style={{ backgroundImage: `url(${e.imagem})` }}>
                   {/* <img src={e.imagem} alt="carro"/> */}
-                  <span>{e.nome}</span>
+
+                  <CardCarroHover>
+                    <h1>{e.nome}</h1>
+                    <h2>{e.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</h2>
+                  </CardCarroHover>
                 </CardCarro>
               </Link>
             </>

@@ -103,8 +103,8 @@ export default function Home({carro}) {
             )}      
         </SecondSection>
 
-          <h1 style={{marginTop:"250px", fontSize: '1.9rem'}} >Temos muito mais:</h1>
-          <hr style={{ width: "100px", marginTop: "5px", border: "2px solid red", color: "red", marginBottom: "20px" }}></hr>
+          <h1 style={{marginTop:"250px", fontSize: '1.9rem'}} >Compre já!</h1>
+          <hr style={{ width: "100px", marginTop: "5px", border: "2px solid red", color: "red" }}></hr>
           <CardContainerHome>
             <CardsInfoBot>
                 <span><IoCarSport /></span>
@@ -123,28 +123,11 @@ export default function Home({carro}) {
             </CardsInfoBot>
           </CardContainerHome>
 
-          <CardsContainerHome>
-          <CardInfoHome>
-            <IconInfo />
-            <h1>Mecanica Preventiva</h1>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
-
-          </CardInfoHome>
-
-          <CardInfoHome>
-            <IconInfo />
-            <h1>Mecanica Especializada</h1>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
-
-          </CardInfoHome>
-
-          <CardInfoHome>
-            <IconInfo />
-            <h1>Estética Automotiva</h1>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
-
-          </CardInfoHome>
-        </CardsContainerHome>
+          <h1 style={{marginTop:"150px", fontSize: '1.9rem'}} >Visite-nos</h1>
+          <hr style={{ width: "100px", marginTop: "5px", border: "2px solid red", color: "red" }}></hr>
+          <div style={{margin: "40px", marginBottom: "180px" }}>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.52960198539!2d-43.35190028487018!3d-23.004319047142356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bdbff1c22675f%3A0x1f6ef7a0bc3b8a3a!2sBRAZMOTORSRJ!5e0!3m2!1spt-BR!2sbr!4v1608662047679!5m2!1spt-BR!2sbr" width="1261.44px" height="600px" frameborder="0"  allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
                 
         <Footer />
       </Container>

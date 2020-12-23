@@ -13,7 +13,7 @@ import { Container, Content, UpSide, DownSide, Left, Right, LeftDown } from '../
 import { InputsBox, Input, SmallInput, InputHour } from "../../components/styleds/Inputs.Styled";
 import SimpleSlider from "../../components/Slide";
 import { ButtonBlack } from '../../components/styleds/Buttons.Styled';
-import { Footer, ItemsFooter } from '../../components/styleds/Layout.Styled';
+import Footer from '../../components/FooterComponent';
 import { IoCall, IoLocationSharp, IoMailSharp } from 'react-icons/io5';
 
 //Whats
@@ -149,26 +149,7 @@ export default function Index({ carro }) {
           </DownSide>
         </Content>
 
-        <Footer>
-          <ItemsFooter>
-            <IoMailSharp />
-            <a href="#">brazmotorsrj@gmail.com</a>
-          </ItemsFooter>
-          <ItemsFooter>
-            <IoLocationSharp />
-            <span style={{ width: 200 }}>
-              Av. Pref. Dulcídio Cardoso, 2900 - Barra da Tijuca, Rio de Janeiro
-              - RJ, 22631-052, Brasil
-            </span>
-          </ItemsFooter>
-          <ItemsFooter>
-          <IoCall />
-            <ul>
-              <li>(21) 96489-6555</li>
-              <li>(21) 2439-8048</li>
-            </ul>
-          </ItemsFooter>
-        </Footer>
+        <Footer/>
         </Container>
     </>
   )

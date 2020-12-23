@@ -3,9 +3,9 @@ import styled from 'styled-components';
 export const CardContainerHome = styled.div`
   width: 100%;
   padding: 0 10%;
-  height: 350px;
+  height: 450px;
   background-color: #fff;
-  margin: 150px;
+  margin: 100px;
 
 
   display: grid;
@@ -15,10 +15,12 @@ export const CardContainerHome = styled.div`
 `
 export const CardsInfoBot = styled.div`
   width: 50.33%;
+  height: 50%;
   margin: 30px;
  
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 
 
   span{

@@ -19,6 +19,26 @@ export const TodosOsCarros = styled.div`
   align-items: center;
 `;
 
+export const CardCarroHover = styled.div`
+  width: 100%;
+  height: 100%;
+  background-color:rgba(255,0,0,0.6);
+  position: absolute;
+
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1{
+    font-size: 40px;
+    margin: 15px;
+  }
+  h2{
+    font-size: 20px;
+  }
+`;
+
 export const CardCarro = styled.div`
   width: 250px;
   height: 310px;
@@ -35,9 +55,7 @@ export const CardCarro = styled.div`
   border-radius: 9px;
   cursor: pointer;
   
-  h1{
-    font-size: 1.1rem;
-  }
+ 
   span{
     font-size: 0.7rem;
   }
@@ -46,4 +64,10 @@ export const CardCarro = styled.div`
     height: 100%;
     object-fit: fill;
   }
+
+  :hover ${CardCarroHover}{
+    display: flex;
+  }
+
 `;
+

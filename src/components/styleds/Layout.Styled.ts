@@ -47,10 +47,10 @@ export const FirstSection = styled.div`
 `;
 
 export const SecondSection = styled.div`
-  width: 90%;
+  width: 80%;
   height: max-content;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 40px;
   align-content: center;
   justify-items: center;
@@ -112,7 +112,7 @@ export const ItemsFooter = styled.div`
 
 export const CardsContainerHome = styled.div`
   width: 80%;
-  height: 400px;
+  height: 500px;
   margin-top: 70px; 
   margin-bottom: 100px;
 

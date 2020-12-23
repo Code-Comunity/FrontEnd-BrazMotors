@@ -37,7 +37,7 @@ export const FirstSection = styled.div`
 `;
 
 export const SecondSection = styled.div`
-  background-color: #fff;
+  background-color: #fff; 
   width: 100%;
   height: max-content;
   padding: 70px 100px;
