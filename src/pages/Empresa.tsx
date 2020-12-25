@@ -9,7 +9,7 @@ import { Container, Conteudo } from '../components/styleds/Empresa.Styled'
 
 import Frente from "../assets/sobre.webp"
 
-export default function Index() {
+export default function Empresa() {
   return (
     <div>
       <Head>
@@ -20,7 +20,7 @@ export default function Index() {
         <Conteudo>
             <h1>Sobre nós</h1>
             <h3>Conheça um pouco mais a nossa história</h3>
-            <hr style={{ width: "100px", marginTop: "5px", border: "2px solid red", color: "red", marginBottom: "20px" }}></hr>
+            <hr style={{ width: "100px", marginTop: "5px", border: "2px solid #ff5555", color: "#ff5555", marginBottom: "20px" }}></hr>
             <Image
                 src={Frente}
                 alt="Picture of the author"

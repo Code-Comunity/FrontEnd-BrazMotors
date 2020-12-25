@@ -21,9 +21,16 @@ export const Footer = styled.div`
       margin: 5px;
   } 
 
+  @media (max-width: 700px){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
 `
 
 export const ItemsFooter = styled.div`
+  width: 100%;
   display: flex;
   align-items: center;
 

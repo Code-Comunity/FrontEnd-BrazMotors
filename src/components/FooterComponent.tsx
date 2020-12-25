@@ -22,18 +22,18 @@ export default function FooterComponent() {
     <Footer>
       <ItemsTop>
         <ItemsFooter>
-          <h3><IoMailSharp /></h3>
+          <h3><IoMailSharp size="22px" /></h3>
           <a href="#">brazmotorsrj@gmail.com</a>
         </ItemsFooter>
         <ItemsFooter>
-          <h3><IoLocationSharp /></h3>
+          <h3><IoLocationSharp size="22px" /></h3>
           <span style={{ width: 200 }}>
             Av. Pref. Dulcídio Cardoso, 2900 - Barra da Tijuca, Rio de Janeiro
             - RJ, 22631-052, Brasil
           </span>
         </ItemsFooter>
         <ItemsFooter>
-        <h3><GiPhone /></h3>
+        <h3><GiPhone size="22px" /></h3>
           <ul>
             <li>(21) 96489-6555</li>
             <li>(21) 2439-8048</li>
@@ -42,8 +42,8 @@ export default function FooterComponent() {
     </ItemsTop>
     <ItemsMid>
       <div>
-        <a href="https://www.instagram.com/brazmotorsrj" target="_blank"  > <h2><FiInstagram /> </h2></a>
-        <a href="https://www.facebook.com/brazmotorsrj" target="_blank"  > <h2> <AiOutlineFacebook /> </h2></a>
+        <a href="https://www.instagram.com/brazmotorsrj" target="_blank"  > <h2> <FiInstagram size="28px" /> </h2></a>
+        <a href="https://www.facebook.com/brazmotorsrj" target="_blank"  > <h2> <AiOutlineFacebook size="28px"/> </h2></a>
       </div>
       <hr style={{ width: "100%", border: "1px solid #FF5555"}}></hr>
     </ItemsMid>

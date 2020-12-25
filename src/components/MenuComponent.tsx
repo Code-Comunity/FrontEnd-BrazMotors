@@ -8,13 +8,16 @@ const Logo =
 
 import LogoNova from "../assets/Frame.svg";
 
-import Burger from './BurgerComp.tsx';
+import Burger from './BurgerComp';
 
 
 export default function MenuComponent() {
   return (
     <NavBar>
+      <div style={{display: 'flex', alignItems: 'center'}}>
         <img id="Logo" src={LogoNova} alt="logo" />
+        <h3 style={{marginLeft: 5, color: '#ff5555'}}>Brazmotors</h3>
+      </div>
         <OptionsNavbar>
           <li>
             <Link href="/home">Home</Link>
@@ -37,7 +40,7 @@ export default function MenuComponent() {
           </ShowroomHover>
           <MecanicaHover>
             <li>
-              <Link href="/Preventiva">Centro automotivo</Link>
+              <Link href="/CentroAutomotivo">Centro automotivo</Link>
             </li>
                 <MecanicaDrop>
                   <li>

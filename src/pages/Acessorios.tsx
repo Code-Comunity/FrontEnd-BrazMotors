@@ -29,7 +29,7 @@ export const getStaticProps = async () => {
   }
   
 
-export default function Index({acessorio}) {
+export default function Acessorios({acessorio}) {
   return (
     <>
         <Head>
@@ -42,8 +42,8 @@ export default function Index({acessorio}) {
             <h2>Acessórios automotivos:</h2>
             <hr style={{width:"100px",
              marginTop:"5px",
-             border:"2px solid red",
-             color:"red",
+             border:"2px solid #ff5555",
+             color:"#ff5555",
              marginBottom:"20px"}}></hr>
             <CardsContainer>
                 {acessorio.map((e) => (

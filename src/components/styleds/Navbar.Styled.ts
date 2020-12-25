@@ -29,7 +29,7 @@ export const ShowroomDrop = styled.div`
   height: max-content;
   background-color: white;
   position: absolute;
-  right: 400px;
+  right: 370px;
 
   list-style: none;
 
@@ -58,7 +58,7 @@ export const MecanicaDrop = styled.div`
   height: max-content;
   background-color: white;
   position: absolute;
-  right: 220px;
+  right: 200px;
 
   list-style: none;
 

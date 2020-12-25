@@ -9,7 +9,7 @@ export const InputFilter = styled.select`
   margin-top: 20px;
   padding-left: 15px;
   outline: none;
-  color: white;
+  color: none;
   option{
     background: gray;
   }
@@ -18,14 +18,14 @@ export const InputFilter = styled.select`
 export const InputHour = styled.select`
  width: 100%;
   height: 50px;
-  background: white;
+  background: #f6f7fb;
   border: solid 1px #ff5555;
   margin-top: 20px;
   padding-left: 15px;
   outline: none;
   color: black;
   option{
-    background: white;
+    background: #f6f7fb;
   }
 `
 
@@ -40,10 +40,9 @@ export const InputsBox = styled.div`
 export const Input = styled.input`
   width: 100%;
   height: 50px;
-  background: white;
+  background: #f6f7fb;
   padding-left: 15px;
   outline: none;
-  background: #FFFFFF;
   border: 1px solid #ff5555;
   box-sizing: border-box;
   margin: 15px;
@@ -56,10 +55,27 @@ export const Input = styled.input`
 export const SmallInput = styled.input`
   width: 48%;
   height: 50px;
-  background: white;
+  background: #f6f7fb;
   padding-left: 15px;
   outline: none;
-  background: #FFFFFF;
+
   border: 1px solid #ff5555;
   box-sizing: border-box;
+`;
+
+export const TextArea = styled.textarea`
+  width: 100%;
+  height: 120px;
+  background: #f6f7fb;
+  padding: 15px;
+  outline: none;
+
+  border: 1px solid #ff5555;
+  box-sizing: border-box;
+  margin: 15px;
+  resize: none;
+
+  @media (max-width: 700px){
+    width: 80%;
+  }
 `;

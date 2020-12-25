@@ -27,7 +27,7 @@ export const getStaticProps = async () => {
     
   }
 
-export default function Index({servico}) {
+export default function Estetica({servico}) {
   return (
     <>
         <Head>
@@ -37,10 +37,11 @@ export default function Index({servico}) {
         <WhatsApp />
         <Container>
             <h2>Estética automotiva:</h2>
-            <hr style={{width:"100px", marginTop:"5px", border:"2px solid red", color:"red", marginBottom:"20px"}}></hr>
+            <hr style={{width:"100px", marginTop:"5px", border:"2px solid #ff5555", color:"#ff5555", marginBottom:"20px"}}></hr>
             <CardsContainer>
                 {servico.map((e) => (
-                        <Card key={e.id}>
+                  <Link href={`estetica/[id]`} as={`estetica/${e._id}`}>
+                        <Card key={e._id}>
                             <CardHover id="cardHover">
                                 <h3>{e.titulo}</h3>
                                 <p>{e.descricao}</p>
@@ -54,6 +55,7 @@ export default function Index({servico}) {
 
                             <h1>{e.titulo}</h1>
                         </Card>
+                        </Link>
                 ))}
             </CardsContainer> 
            <ContainerForms>

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const QualidadesContainer = styled.div`
     width: 65%;
     height: 400px;
-
+    background: #f6f7fb;
     display: flex;
     justify-content: space-around;
 `

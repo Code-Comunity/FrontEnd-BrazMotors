@@ -58,7 +58,7 @@ export default function Showroom({marca}): JSX.Element {
         <Container>
           <WhatsApp />
 
-          <h1 style={{fontSize: '1.9rem', color: "#FF5555" }} >Temos muito mais:</h1>
+          <h1 style={{fontSize: '1.9rem', color: "#FF5555",marginTop: "60px"}} >Marcas</h1>
           <hr style={{ width: "100px", marginTop: "5px", border: "2px solid #FF5555", color: "#FF5555", marginBottom: "20px" }}></hr>
           
             <CardsContainer>
@@ -73,9 +73,7 @@ export default function Showroom({marca}): JSX.Element {
             </CardsContainer>
         </Container>
 
-       <FooterComponent>
-
-       </FooterComponent>
+       <FooterComponent />
     </div>
   )
 }

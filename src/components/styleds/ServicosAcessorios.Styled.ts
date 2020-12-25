@@ -1,10 +1,10 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
-    width: 100%;
+   width: 100%;
     height: 100vh;
     padding-top: 75px;
-    background-color: #F2F3F8;
+    background: #f6f7fb;
 
     display: flex;
     flex-direction: column;
@@ -29,6 +29,10 @@ export const UpSide = styled.div`
 
     display: flex;
     flex-direction: row;
+
+    @media (max-width: 700px){
+        flex-direction: column;
+    }
 `;
 
 export const DownSide = styled.div`
@@ -42,18 +46,20 @@ export const Left = styled.div`
 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     img{
       width: 100%;
       height: 500px;
       display: block;
-      object-fit: cover;
+      object-fit: contain;
       @media (max-width: 700px){
         width: 300px;
         height: max-content;
       }
     }
+
+    
 `;
 
 export const Slide = styled.div`
@@ -87,5 +93,11 @@ export const LeftDown = styled.div`
     p{
         font-size: 15px;
         color: #595858;
+        width: 100%;
+
+        @media (max-width: 700px){
+        width: 300px;
+        height: max-content;
+      }
     }
 `;

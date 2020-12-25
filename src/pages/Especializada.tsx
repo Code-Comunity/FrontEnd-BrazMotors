@@ -34,7 +34,7 @@ export const getStaticProps = async () => {
 
 
 
-export default function Index({servico}) {
+export default function Especializada({servico}) {
 
   const [isModalVisible, setIsModalVisible] = useState(false);
 
@@ -47,10 +47,11 @@ export default function Index({servico}) {
         <Container>
         <WhatsApp />
             <h2>Mecanica especializada:</h2>
-            <hr style={{width:"100px", marginTop:"5px", border:"2px solid red", color:"red", marginBottom:"20px"}}></hr>
+            <hr style={{width:"100px", marginTop:"5px", border:"2px solid #ff5555", color:"#ff5555", marginBottom:"20px"}}></hr>
             <CardsContainer>
                 {servico.map((e) => (
-                        <Card key={e.id}>
+                      <Link href={`mecesp/[id]`} as={`mecesp/${e._id}`}>
+                        <Card key={e._id}>
                             <CardHover id="cardHover">
                                 <h3>{e.titulo}</h3>
                                 <p>{e.descricao}</p>
@@ -61,9 +62,9 @@ export default function Index({servico}) {
                             <CardTop>
                             <CardImageService uri={e.imagem} />
                             </CardTop>
-
                             <h1>{e.titulo}</h1>
                         </Card>
+                      </Link>
                 ))}
             </CardsContainer> 
            <ContainerForms>
