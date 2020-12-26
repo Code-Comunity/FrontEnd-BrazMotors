@@ -80,7 +80,7 @@ export default function Home({carro}) {
         <WhatsApp />
        
         <FirstSection>
-          <h1 style={{marginTop:"50px", fontSize: '1.9rem'}} >Nossos carros</h1>
+          <h1 style={{marginTop:"30px", fontSize: '1.9rem'}} >Nossos carros</h1>
           <hr style={{ width: "100px", marginTop: "5px", border: "2px solid #ff5555", color: "#ff5555", marginBottom: "20px" }}></hr>
         </FirstSection>
         <SecondSection>

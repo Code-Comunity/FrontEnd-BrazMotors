@@ -17,7 +17,7 @@ export const Footer = styled.div`
   }
 
   h3{
-      font-size: 35px;
+      font-size: 22px;
       margin: 5px;
   } 
 
@@ -38,18 +38,27 @@ export const ItemsFooter = styled.div`
     list-style: none;
   }
 
+  @media(max-width: 450px){
+    margin: 10px;
+  }
+
 `
 
 export const ItemsTop = styled.div`
   width: 100%;
-  height: max-content;
   padding: 70px 100px;
   background-color: #FF5555;
 
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content:center;
   color: white;
+
+  @media(max-width: 450px){
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: left;
+  }
 `
 
 export const ItemsMid = styled.div`

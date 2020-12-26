@@ -50,6 +50,9 @@ export const Input = styled.input`
   @media (max-width: 700px){
     width: 80%;
   }
+  @media (max-width: 450px) {
+    width: 100%;
+  }
 `;
 
 export const SmallInput = styled.input`
@@ -61,6 +64,10 @@ export const SmallInput = styled.input`
 
   border: 1px solid #ff5555;
   box-sizing: border-box;
+
+    @media (max-width: 450px) {
+        width: 60;
+    }
 `;
 
 export const TextArea = styled.textarea`
@@ -77,5 +84,8 @@ export const TextArea = styled.textarea`
 
   @media (max-width: 700px){
     width: 80%;
+  }
+  @media (max-width: 450px) {
+    width: 100%;
   }
 `;

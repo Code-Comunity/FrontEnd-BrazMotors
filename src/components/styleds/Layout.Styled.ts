@@ -16,14 +16,24 @@ export const Container = styled.div`
 
 export const Header = styled.div`
   width: 100%;
-  background-color: white;
   display: flex;
   flex-direction: column;
   padding-top: 65px;
-  
+
+
   img{
     object-fit: cover;
+
+    @media(max-width: 450px){
+      object-fit: contain;
+    }
   }
+
+  @media(max-width: 450px){
+    padding-top: 34px;
+    height: 240px;
+  }
+
 `;
 // MAIN PART
 export const FirstSection = styled.div`

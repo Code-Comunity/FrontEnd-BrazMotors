@@ -2,38 +2,51 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     width: 100%;
-    height: 100vh;
-    padding-top: 75px;
+    height: 100%;
     background-color: #F2F3F8;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 450px) {
+        padding-top: 75px;
+    }
 `;
 
 export const Content = styled.div`
-    width: 80%;
-    height: 100%;
-    margin-top: 260px;
+    width: 100%;
     margin-bottom: 100px;
     
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 450px) {
+        margin-top: 0px;
+        align-items: center;
+    }
 `;
 
 export const UpSide = styled.div`
     width: 100%;
-    height: 100%;
-    margin-top: 160px;
+    margin-top: 70px;
 
     display: flex;
     flex-direction: row;
+
+    @media (max-width: 450px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+    }
 `;
 
 export const DownSide = styled.div`
     width: 100%;
     height: 50%;
+
 `;
 
 export const Left = styled.div`
@@ -54,6 +67,11 @@ export const Left = styled.div`
         height: max-content;
       }
     }
+
+    @media (max-width: 450px) {
+        width: 80%;
+        align-items: center;
+    }
 `;
 
 export const Slide = styled.div`
@@ -72,6 +90,10 @@ export const Right = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+
+    @media (max-width: 450px) {
+        width: 100%;
+    }
 `;
 
 export const LeftDown = styled.div`

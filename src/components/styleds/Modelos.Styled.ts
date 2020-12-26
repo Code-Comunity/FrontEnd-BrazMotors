@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   width: 100%;
   height: 100vh;
+  padding-top: 70px;
   background: #F2F3F8;
   display: flex;
   flex-direction: column;
@@ -17,6 +18,12 @@ export const TodosOsCarros = styled.div`
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 450px) {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+    }
 `;
 
 export const CardCarroHover = styled.div`
@@ -38,6 +45,7 @@ export const CardCarroHover = styled.div`
   h2{
     font-size: 20px;
   }
+
 `;
 
 export const CardCarro = styled.div`
@@ -70,6 +78,10 @@ export const CardCarro = styled.div`
     display: flex;
     transition: 1s;
   }
+
+  @media (max-width: 450px) {
+        margin: 20px;
+    }
 
 `;
 

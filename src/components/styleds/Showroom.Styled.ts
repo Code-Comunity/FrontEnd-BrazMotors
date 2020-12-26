@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     width: 100%;
-    height: 100vh;
     padding-top: 70px;
     background: #f6f7fb;
 
@@ -14,21 +13,28 @@ export const Container = styled.div`
 
 export const CardsContainer = styled.div`
     width: 100%;
-    height: max-content;
+
     justify-items: center;
     align-items: center;
-
     margin-top: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 5%;
     filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
     border-radius: 9px;
+
     @media (max-width: 700px) {
         display: flex;
-        flex-direction: row;
-
     }
+
+    @media (max-width: 450px) {
+        margin-top: 20px;
+        margin-bottom: 40px;
+
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
 `;
 
 
@@ -52,5 +58,9 @@ export const Card =  styled.div`
 
     @media (max-width: 700px){
         width: 33.33%;
+    }
+
+    @media (max-width: 450px) {
+        margin-bottom: 20px;
     }
 `;

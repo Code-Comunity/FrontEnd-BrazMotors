@@ -63,13 +63,13 @@ export default function Showroom({marca}): JSX.Element {
           
             <CardsContainer>
 
-            {marca.map((e) => (
-                    <Link href="./marcas/modelos/[id]" as={`./marcas/modelos/${e.id}`}>
-                        <CardImage uri={e.img} >
-                            
-                        </CardImage>
-                </Link>
-            ))}
+              {marca.map((e) => (
+                      <Link href="./marcas/modelos/[id]" as={`./marcas/modelos/${e.id}`}>
+                          <CardImage uri={e.img} >
+                              
+                          </CardImage>
+                  </Link>
+              ))}
             </CardsContainer>
         </Container>
 

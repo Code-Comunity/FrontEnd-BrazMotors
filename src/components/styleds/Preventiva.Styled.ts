@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const  Container = styled.div`
   width: 100%;
   min-height: 100vh;
-  padding-top: 80px;
+  padding-top: 70px;
   background: #f6f7fb;
   text-align: center;
 
@@ -28,6 +28,12 @@ export const CardsContainer = styled.div`
   justify-content: space-around;
   grid-gap: 10px;
   padding: 10px;
+
+  @media (max-width: 450px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 export const CardTop = styled.div`
@@ -68,6 +74,9 @@ export const CardHover = styled.div`
     color: #fff;
     margin-bottom: 10px;
   }
+  @media (max-width: 450px) {
+    width: 400px;
+  }
 `
 export const PrecoHover = styled.div`
   width: 100%;
@@ -99,5 +108,10 @@ export const Card = styled.div`
   &:hover ${CardHover} {
       display: flex;
       transition: 1s;
+  }
+
+  @media (max-width: 450px) {
+    margin: 20px;
+    width: 400px;
   }
 `

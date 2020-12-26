@@ -48,61 +48,61 @@ export default function Index({ carro }) {
       <MenuComponent />
       <Container>
       <WhatsApp />
-        <Content>
-          <UpSide>
-            <Left>
-              <SimpleSlider />
-            </Left>
-            <Right>
-              <h1 style={{ 
-                color: 'black'
-              }} >
-                Demonstre interesse 
-              </h1>
-              <InputsBox>
-                <Input type="text" placeholder="Nome" />
-                <Input type="text" placeholder="Email" />
+          <Content>
+            <UpSide>
+              <Left>
+                <SimpleSlider />
+              </Left>
+              <Right>
+                <h1 style={{ 
+                  color: 'black'
+                }} >
+                  Demonstre interesse 
+                </h1>
+                <InputsBox>
+                  <Input type="text" placeholder="Nome" />
+                  <Input type="text" placeholder="Email" />
+                  <div style={{
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    width: '100%'
+                  }}>
+                    <SmallInput type="text" placeholder="Telefone" />
+                    <SmallInput type="text" placeholder="Celular" />
+                  </div>
+                  <InputHour>
+                    <option value="0">Selecione o melhor horario pra contato</option>
+                    <option value="1">Manhã</option>
+                    <option value="2">Tarde</option>
+                    <option value="3">Noite</option>
+                  </InputHour>
+                  <ButtonBlack>Enviar</ButtonBlack>
+                </InputsBox>
                 <div style={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                  width: '100%'
+                  textAlign: 'left',
+                  width: "100%",
+                  marginLeft: 25,
+                  color: "black"
                 }}>
-                  <SmallInput type="text" placeholder="Telefone" />
-                  <SmallInput type="text" placeholder="Celular" />
+                  <h3>Dados do veículo:</h3>
+                  <span>Ano:</span>
+                  <span>Marca:</span>
+                  <span>Modelo:</span>
+                  <h3>Valor:</h3>
                 </div>
-                <InputHour>
-                  <option value="0">Selecione o melhor horario pra contato</option>
-                  <option value="1">Manhã</option>
-                  <option value="2">Tarde</option>
-                  <option value="3">Noite</option>
-                </InputHour>
-                <ButtonBlack>Enviar</ButtonBlack>
-              </InputsBox>
-              <div style={{
-                textAlign: 'left',
-                width: "100%",
-                marginLeft: 25,
-                color: "black"
-              }}>
-                <h3>Dados do veículo:</h3>
-                <span>Ano:</span>
-                <span>Marca:</span>
-                <span>Modelo:</span>
-                <h3>Valor:</h3>
-              </div>
 
 
-            </Right>
-          </UpSide>
+              </Right>
+            </UpSide>
 
-          <DownSide style={{position: "absolute"}}>
-            <LeftDown>
-              <h1>Descrição:</h1>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining.</p>
-            </LeftDown>
-          </DownSide>
-        </Content>
+            <DownSide style={{position: "absolute"}}>
+              <LeftDown>
+                <h1>Descrição:</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining.</p>
+              </LeftDown>
+            </DownSide>
+          </Content>
 
         <Footer>
           <ItemsFooter>

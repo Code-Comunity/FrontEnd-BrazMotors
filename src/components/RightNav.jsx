@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -12,7 +13,7 @@ const Ul = styled.ul`
 
   @media (max-width: 768px) {
     flex-flow: column nowrap;
-    background-color: #000000;
+    background-color: #FF5555;
     position: fixed;
     transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
     top: 0;
@@ -23,7 +24,8 @@ const Ul = styled.ul`
     transition: transform 0.3s ease-in-out;
     display: flex;
 
-    li {
+    a{
+      text-decoration: none;
       color: #fff;
     }
   }
@@ -32,10 +34,36 @@ const Ul = styled.ul`
 const RightNav = ({ open }) => {
   return (
     <Ul open={open}>
-      <li>Home</li>
-      <li>Showroom</li>
-      <li>Mecanica Preventiva</li>
-      <li>Catalogo</li>
+        <li>
+          <Link href="/home" >Home</Link>
+        </li> 
+        <li>
+          <Link href="/Empresa" > Empresa </Link>
+        </li> 
+      
+        <li>
+          <Link href="/showroom" > Showroom</Link>
+        </li> 
+     
+        <li>
+           <Link href="/Preventiva"> Mecanica Preventiva </Link>
+        </li> 
+     
+        <li>
+          <Link href="/Especializada">  Mecanica Especializada</Link> 
+        </li> 
+      
+        <li>
+          <Link href="/Estetica"> Estética automotiva</Link>
+        </li> 
+      
+        <li>
+          <Link href="/Acessorios"> Acessórios automotivos</Link>
+        </li> 
+       
+        <li>
+          <Link href="/Financiamento">Financiamento</Link>
+        </li> 
     </Ul>
   )
 }

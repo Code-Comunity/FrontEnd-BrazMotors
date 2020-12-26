@@ -42,6 +42,20 @@ export const CardsInfoBot = styled.div`
     color: #282A36;
     text-align: left;
   }
+
+  @media(max-width: 450px){
+    width: 80px;
+
+    h1{
+      font-size: 1.0rem;
+    }
+    p{
+      font-size: 0.7rem;
+    }
+    span{
+      font-size: 2.5rem;
+    }
+  }
 `
 export const CardImage = styled.div`
   width: 250px;
@@ -52,6 +66,11 @@ export const CardImage = styled.div`
   background-size: cover;
   background-position: center;
   cursor: pointer;
+
+  @media(max-width: 450px){
+    height: 200px;
+    margin: 10px;
+  }
 `;
 
 export const Card = styled.div`
@@ -66,6 +85,7 @@ export const Card = styled.div`
 
   @media (max-width: 700px){
     width: 100%;
+    height: 190px;
   }
 
   display: flex;

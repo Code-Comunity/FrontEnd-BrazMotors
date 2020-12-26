@@ -22,18 +22,18 @@ export default function FooterComponent() {
     <Footer>
       <ItemsTop>
         <ItemsFooter>
-          <h3><IoMailSharp size="22px" /></h3>
+          <h3><IoMailSharp  /></h3>
           <a href="#">brazmotorsrj@gmail.com</a>
         </ItemsFooter>
         <ItemsFooter>
-          <h3><IoLocationSharp size="22px" /></h3>
-          <span style={{ width: 200 }}>
+          <h3><IoLocationSharp  /></h3>
+          <span >
             Av. Pref. Dulcídio Cardoso, 2900 - Barra da Tijuca, Rio de Janeiro
             - RJ, 22631-052, Brasil
           </span>
         </ItemsFooter>
         <ItemsFooter>
-        <h3><GiPhone size="22px" /></h3>
+        <h3><GiPhone  /></h3>
           <ul>
             <li>(21) 96489-6555</li>
             <li>(21) 2439-8048</li>
